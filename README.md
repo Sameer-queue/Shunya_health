@@ -1,16 +1,17 @@
 # 💊 Formulary AI — Intelligent Drug Preference Assistant
 
-An AI-powered web application that helps users instantly check **formulary drug preferences**, codes, and preferred alternatives — with both deterministic lookup and **Gemini-powered natural language answers**.
+An AI-powered web application that helps users instantly check **formulary drug preferences**, codes, and preferred alternatives — combining **deterministic lookup** and **Gemini-powered natural language answers**.
 
 ---
 
 ## 🚀 Features
 
-✅ Scrape formulary data directly from official sources  
-✅ Ask natural questions (e.g., *Is Kanjinti preferred?*)  
-✅ Get both structured data **and** AI-generated insights  
-✅ Elegant Apple-style UI built with React + Tailwind + Framer Motion  
-✅ Real-time toast notifications for user feedback  
+✅ Scrapes formulary data directly from official sources  
+✅ Accepts natural-language questions (e.g., *“Is Kanjinti preferred?”*)  
+✅ Returns structured JSON + AI-enhanced summaries  
+✅ Elegant, Apple-inspired UI using **React + Tailwind + Framer Motion**  
+✅ Real-time **toast notifications** for user feedback  
+✅ End-to-end Flask ↔ React integration  
 
 ---
 
@@ -22,6 +23,7 @@ shunya_formulary_app/
 ├── scraper.py # Scrapes formulary data
 ├── embedder.py # Embedding-based retrieval
 ├── gemini_client.py # Gemini API client
+│
 ├── data/
 │ └── formulary.json # Cached formulary data
 │
@@ -34,66 +36,65 @@ shunya_formulary_app/
 │ ├── tailwind.config.js
 │ └── vite.config.ts
 │
-├── .env # Environment variables (optional)
+├── .env # (Optional) Environment variables
+├── requirements.txt # Python dependencies
 └── README.md
 
-
+yaml
+Copy code
 
 ---
 
 ## ⚙️ Setup & Installation
 
 ### 🧩 Prerequisites
-- Python **3.10+**
-- Node.js **18+**
-- A valid **Gemini API key**
+
+- **Python** ≥ 3.10  
+- **Node.js** ≥ 18  
+- A valid **Gemini API Key** → [Get one here](https://aistudio.google.com/app/apikey)
 
 ---
 
 ### 🧱 Backend Setup (Flask)
 
-1️⃣ Navigate to your backend root:
-IN TERMINAL :bash
--cd shunya_formulary_app
--python3 -m venv .venv
--source .venv/bin/activate
+**1️⃣ Create & activate a virtual environment**
 
-2️⃣ Install dependencies:
+```bash
+cd shunya_formulary_app
+python3 -m venv .venv
+source .venv/bin/activate    # macOS / Linux
+# or
+.venv\Scripts\activate       # Windows
+2️⃣ Install dependencies
 
--IN TERMINAL :bash
+bash
+Copy code
+pip install -r requirements.txt
+(If missing, install manually:)
 
--pip install -r requirements.txt
+bash
+Copy code
+pip install flask flask-cors requests beautifulsoup4 google-generativeai numpy scikit-learn
+3️⃣ Export your Gemini API key
 
-3️⃣ Export your Gemini API key:
+bash
+Copy code
+export GEMINI_API_KEY="your_google_gemini_api_key_here"
+(You can add this to .bashrc or .zshrc for persistence.)
 
--IN TERMINAL :bash
--Copy code
--export GEMINI_API_KEY="your_google_gemini_api_key_here"
+4️⃣ Start the Flask backend
 
-4️⃣ Start Flask:
+bash
+Copy code
+flask --app app run --port 5000
+✅ Flask runs at → http://127.0.0.1:5000
 
--IN TERMINAL :bash
--Copy code
--flask --app app run --port 5000
--✅ Flask will start at:
--👉 http://127.0.0.1:5000
+💻 Frontend Setup (React + Vite)
+In a new terminal:
 
-###💻 Frontend Setup (React + Vite)
--In a new terminal:
-
-
--Copy code
--cd frontend
--npm install
--npm run dev
--✅ Vite will start at:
--👉 http://localhost:5173
-
-
----
-
-**Author:** Sameer Srivastava (VIT '26')
-```
-Email: rishupayne04@gmail.com
-GitHub: https://github.com/Sameer-queue
-```
+bash
+Copy code
+cd frontend
+npm install
+npm run dev
+✅ Vite runs at → http://localhost:5173
