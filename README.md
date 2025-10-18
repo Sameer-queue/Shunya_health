@@ -55,11 +55,13 @@ Copy code
 
 ---
 
-### 🧱 Backend Setup (Flask)
+
 
 **1️⃣ Create & activate a virtual environment**
+SETUP:
 
-```bash
+### 🧱 Setup 
+```bash -- Backend (Flask)
 cd shunya_formulary_app
 python3 -m venv .venv
 source .venv/bin/activate    # macOS / Linux
