@@ -54,38 +54,40 @@ shunya_formulary_app/
 
 1️⃣ Navigate to your backend root:
 IN TERMINAL :bash
-cd shunya_formulary_app
-python3 -m venv .venv
-source .venv/bin/activate
+-cd shunya_formulary_app
+-python3 -m venv .venv
+-source .venv/bin/activate
 
 2️⃣ Install dependencies:
 
-IN TERMINAL :bash
-Copy code
-pip install -r requirements.txt
+-IN TERMINAL :bash
+
+-pip install -r requirements.txt
+
 3️⃣ Export your Gemini API key:
 
-IN TERMINAL :bash
-Copy code
-export GEMINI_API_KEY="your_google_gemini_api_key_here"
+-IN TERMINAL :bash
+-Copy code
+-export GEMINI_API_KEY="your_google_gemini_api_key_here"
+
 4️⃣ Start Flask:
 
-IN TERMINAL :bash
-Copy code
-flask --app app run --port 5000
-✅ Flask will start at:
-👉 http://127.0.0.1:5000
+-IN TERMINAL :bash
+-Copy code
+-flask --app app run --port 5000
+-✅ Flask will start at:
+-👉 http://127.0.0.1:5000
 
 ###💻 Frontend Setup (React + Vite)
-In a new terminal:
+-In a new terminal:
 
 
-Copy code
-cd frontend
-npm install
-npm run dev
-✅ Vite will start at:
-👉 http://localhost:5173
+-Copy code
+-cd frontend
+-npm install
+-npm run dev
+-✅ Vite will start at:
+-👉 http://localhost:5173
 
 
 ---
