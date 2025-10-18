@@ -37,8 +37,7 @@ shunya_formulary_app/
 ├── .env # Environment variables (optional)
 └── README.md
 
-yaml
-Copy code
+
 
 ---
 
@@ -53,7 +52,7 @@ Copy code
 
 ### 🧱 Backend Setup (Flask)
 
-/*1️⃣ Navigate to your backend root:
+1️⃣ Navigate to your backend root:
 ```bash
 cd shunya_formulary_app
 python3 -m venv .venv
@@ -87,7 +86,7 @@ npm run dev
 ✅ Vite will start at:
 👉 http://localhost:5173
 
-*/
+
 ---
 
 **Author:** Sameer Srivastava (VIT '26')
