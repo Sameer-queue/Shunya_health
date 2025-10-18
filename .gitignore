@@ -1,0 +1,61 @@
+# --- Python / Flask / Virtualenv ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.pot
+*.pyc
+*.pdb
+instance/
+.env
+*.env
+*.sqlite3
+*.db
+*.db-journal
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+*.mypy_cache/
+*.pytest_cache/
+.coverage
+.pytest_cache/
+.cache/
+.tox/
+.venv/
+venv/
+env/
+ENV/
+Pipfile.lock
+poetry.lock
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Data / Model Outputs ---
+data/*.html
+data/*.csv
+data/*.xlsx
+data/*.tmp
+data/*.bak
+data/*.cache
+data/formulary.json
+
+# --- Flask specific ---
+instance/
+flask_session/
+*.log
+*.out
+
+# --- Misc ---
+uploads/
+logs/

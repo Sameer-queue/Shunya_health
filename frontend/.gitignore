@@ -1,0 +1,42 @@
+# --- Node / Vite / React ---
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+.vscode/
+.cache/
+*.log
+*.lock
+*.pid
+*.seed
+*.tmp
+
+# --- Environment Files ---
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+
+# --- Testing ---
+coverage/
+jest-cache/
+jest-coverage/
+cypress/videos/
+cypress/screenshots/
+
+# --- Miscellaneous ---
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+vite.config.timestamp-*

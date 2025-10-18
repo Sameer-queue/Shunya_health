@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shunya Formulary Query</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>AI-Powered Drug Formulary Scraper & Query</h1>
+
+      <section class="card">
+        <h2>1) Scrape & Parse</h2>
+        <p>Click to fetch and parse the formulary page (or provide a custom URL).</p>
+        <div class="row">
+          <input id="urlInput" type="text" placeholder="Custom URL (optional)" />
+          <button id="scrapeBtn">Scrape Now</button>
+        </div>
+        <pre id="scrapeResult" class="pre"></pre>
+      </section>
+
+      <section class="card">
+        <h2>2) Ask a Question</h2>
+        <p>Examples: "Is Adalimumab J0135 preferred?" • "Preferred alternatives to adalimumab"</p>
+        <div class="row">
+          <input id="qInput" type="text" placeholder="Type your question…" />
+          <button id="askBtn">Ask</button>
+        </div>
+        <div class="split">
+          <div>
+            <h3>Deterministic Result</h3>
+            <pre id="detResult" class="pre"></pre>
+          </div>
+          <div>
+            <h3>LLM Answer</h3>
+            <pre id="llmResult" class="pre"></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Data Preview</h2>
+        <button id="refreshBtn">Refresh Data</button>
+        <pre id="dataPreview" class="pre"></pre>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+/* 🔷 App container */
+@import "tailwindcss";
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 100vh;
+  background-color: #f8fafc; /* slate-50 */
+}
+
+/* 🎯 Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms ease;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em rgba(100, 108, 255, 0.7));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.7));
+}
+
+/* ♻️ Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+/* 📄 Card and text */
+.card {
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+}
